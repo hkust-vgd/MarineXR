@@ -1,0 +1,404 @@
+/* MarineXR one-page theme (Bootstrap + custom). */
+
+:root {
+  --mxr-bg: #070a10;
+  --mxr-surface: rgba(255, 255, 255, 0.06);
+  --mxr-surface-2: rgba(255, 255, 255, 0.09);
+  --mxr-border: rgba(255, 255, 255, 0.12);
+  --mxr-text: rgba(255, 255, 255, 0.92);
+  --mxr-muted: rgba(255, 255, 255, 0.68);
+  --mxr-primary: #3b82f6;
+  --mxr-accent: #22c55e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* background: radial-gradient(1200px 800px at 15% 10%, rgba(34, 197, 94, 0.14), transparent 55%),
+    radial-gradient(900px 600px at 80% 15%, rgba(59, 130, 246, 0.14), transparent 60%),
+    var(--mxr-bg); */
+  color: var(--mxr-text);
+  margin: 0;
+  transition: background-color 0.25s ease; /* This makes the color change smooth */
+  min-height: 200vh; /* Just to ensure there is room to scroll */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none;     /* IE 10 and 11 */
+  user-select: none;         /* Standard syntax */
+}
+
+.text-secondary {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+
+.text-muted {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+.text-body,
+.text-body-emphasis {
+  color: var(--mxr-text) !important;
+}
+
+/* Ensure headings in cards stay bright on dark surfaces */
+.card h1,
+.card h2,
+.card h3,
+.card h4,
+.card h5,
+.card h6 {
+  color: var(--mxr-text);
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  z-index: 9999;
+  background: #111827;
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: linear-gradient(to bottom, rgba(7, 10, 16, 0.86), rgba(7, 10, 16, 0.55));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar .nav-link {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.brand-title {
+  letter-spacing: 0.02em;
+  font-weight: 600;
+}
+
+.nav-cta {
+  border-radius: 999px;
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+}
+
+.hero {
+  position: relative;
+  min-height: clamp(560px, 88vh, 900px);
+  overflow: clip;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  filter: saturate(1.1) contrast(1.05);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(900px 480px at 25% 25%, rgba(34, 197, 94, 0.18), transparent 60%),
+    radial-gradient(900px 480px at 80% 10%, rgba(59, 130, 246, 0.18), transparent 60%),
+    linear-gradient(to bottom, rgba(7, 10, 16, 0.45), rgba(7, 10, 16, 0.85));
+}
+
+.hero-content {
+  position: relative;
+  padding-top: clamp(4rem, 10vh, 7rem);
+  padding-bottom: clamp(3rem, 8vh, 5rem);
+}
+
+.hero-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.hero-lead {
+  max-width: 52rem;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.hero-logo {
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.4));
+}
+
+.hero-badges .badge {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(17, 24, 39, 0.65) !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.hero-card {
+  background: rgba(17, 24, 39, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.hero-fade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 100px;
+  background: linear-gradient(to bottom, rgba(7, 10, 16, 0), rgba(7, 10, 16, 1));
+}
+
+.section-pad {
+  padding: clamp(3.2rem, 6.5vw, 5.5rem) 0;
+}
+
+.section-dark {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.02));
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.section-head {
+  max-width: 62rem;
+}
+
+.text-emphasis {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 600;
+}
+
+.glass-card {
+  background: rgba(17, 24, 39, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+  color: var(--mxr-text);
+  --bs-card-color: var(--mxr-text);
+  --bs-card-title-color: var(--mxr-text);
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.40);
+}
+
+.card-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 0.6rem;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  color: var(--mxr-text);
+  height: 100%;
+}
+
+.timeline {
+  display: grid;
+  gap: 1rem;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 14px 1fr;
+  gap: 0.9rem;
+  align-items: start;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.95), rgba(59, 130, 246, 0.95));
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+  margin-top: 0.22rem;
+}
+
+.callout {
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.22);
+  border-radius: 0.9rem;
+  padding: 1rem;
+}
+
+.video-frame {
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.45);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.asset-card {
+  overflow: hidden;
+  margin: 0;
+  position: relative;
+  background: rgba(17, 24, 39, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+  color: var(--mxr-text);
+  --bs-card-color: var(--mxr-text);
+  --bs-card-title-color: var(--mxr-text);
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.40);
+}
+
+.asset-card img {
+  display: block;
+}
+
+.asset-caption {
+  padding: 0.9rem 1rem 1rem;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.gallery-controls {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.gallery .gallery-prev,
+.gallery .gallery-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: auto;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #fff;
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 0;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+.gallery .gallery-prev {
+  left: 0.65rem;
+}
+
+.gallery .gallery-next {
+  right: 0.65rem;
+}
+.footer-rule {
+  border-color: rgba(255, 255, 255, 0.10);
+  opacity: 1;
+}
+
+/* Make primary button feel a bit more “premium” */
+.btn-primary {
+  background-color: var(--mxr-primary);
+  border-color: rgba(255, 255, 255, 0.0);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #2563eb;
+}
+
+.btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus {
+  background: rgba(255, 255, 255, 0.10);
+  border-color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.98);
+}
+
+/* carousel items */
+.carousel-track {
+  position: relative;
+  height: 300px;
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-card {
+  position: absolute;
+  width: 80%;
+  transition: transform 0.5s ease, opacity 0.5s ease, z-index 0.5s;
+  opacity: 0;
+  z-index: 0;
+}
+
+.carousel-card img { width: 100%; border-radius: 8px; }
+
+.carousel-card.active {
+  opacity: 1;
+  z-index: 10;
+  transform: translateX(0) scale(1);
+}
+
+.carousel-card.next {
+  opacity: 0.6;
+  z-index: 5;
+  transform: translateX(40%) scale(0.8);
+}
+
+.carousel-card.prev {
+  opacity: 0.6;
+  z-index: 5;
+  transform: translateX(-40%) scale(0.8);
+}
+
+.carousel-card.hidden { display: none; }
+
+/* avatar items */
+.avatar-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px; /* overlap avatars */
+    margin-top: 8px;
+}
+
+.avatar {
+    display: inline-block;
+    border-radius: 50%;
+    border: 3px solid #222;
+    overflow: hidden;
+    width: 48px;
+    height: 48px;
+    margin-left: -12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: transform 0.2s, z-index 0.2s;
+    position: relative;
+    z-index: 1;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.avatar:hover {
+    transform: translateY(-12px) scale(1.08);
+    z-index: 10;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}

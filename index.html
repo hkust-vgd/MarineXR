@@ -1,58 +1,579 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
-<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
-<title xml:lang="en-US">Embracing Extended Reality in Marine Education</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MarineXR — Educational VR Game</title>
+    <meta name="description"
+          content="A one-page landing site for an educational VR game with immersive learning and an AI assistant (Marine GPT)." />
 
-<meta name="xsl:vendor" content="libxslt"/>
-<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" hreflang="en"/>
-<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" hreflang="en"/>
-<link rel="schema.DCTYPE" href="http://purl.org/dc/dcmitype/" hreflang="en"/>
-<link rel="schema.DCAM" href="http://purl.org/dc/dcam/" hreflang="en"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
 
-<link href="css/bootstrap.min.css" rel="stylesheet" >
-<script src="js/bootstrap.bundle.min.js" ></script>
+    <script src="js/bootstrap.bundle.min.js" defer></script>
 </head>
 
-<body dir="ltr" style="max-width:10in;margin-top:0.5in; margin-bottom:0.5in; margin-left:auto; margin-right:auto; ">
-<h1 class="h1 text-primary">Embracing Extended Reality in Marine Education</h1>
+<body>
+    <a class="visually-hidden-focusable skip-link" href="#main">Skip to content</a>
 
-<div class="row">
-<p style="text-align: justify;" class="">A team of marine scientists employ extended reality (XR) to revolutionize people experiences in marine education. This UGC-funded project is led by Prof. Sai-Kit Yeung (Integrative Systems &amp; Design) and Prof. Cindy Lam (Department of Ocean Science) at HKUST, with joint collaboration of Prof. Apple Chui (School of Life Sciences) from CUHK, Prof. Jianwen Qiu and Dr. Veronica Chan (Department of Biology) from HKBU, and Prof. Cedric Tan (Environmental and Geographical Sciences) from the University of Nottingham Malaysia. </p>
+    <header class="site-nav">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="#top" aria-label="MarineXR home">
+                    <img src="imgs/MarineXR_icon.png" width="28" height="28" alt="MarineXR logo" />
+                    <span class="brand-title">MarineXR</span>
+                </a>
 
-<p style="text-align: justify;" class="">The project aims to design a game app with immersive Virtual Reality (VR) eLearning tools with AI machine-learning platform “Marine GPT”. The platform contains marine-specific data and information which requires players to learn right before the game starts. This would engage students’ interactions, learning motivation, ideas exchange and gain insight on marine special topics and beyond. The game framework is on level-based, the player must complete certain objectives, such as defeating enemies or solving scenario-based challenges in order to progress to the next level. The game has 4 levels in total, starting from intertidal habitats such as mangroves and mudflats, boulder shore (Level 1) to subtidal coral reefs (Level 2) and then to the deep sea (Level 3) in Hong Kong. After completion of Level 3, players will step into the next level to learn similar coastal marine habitats in Malaysia (Level 4). The game allows the players to recognize marine biodiversity and ecosystems between tropical and subtropical biomes. </p>
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#nav"
+                        aria-controls="nav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
+                <div class="collapse navbar-collapse" id="nav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#trailer">Trailer</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#objectives">Objectives</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#assets">Assets</a></li>
+                        <li class="nav-item ms-lg-2">
+                            <a class="btn btn-sm btn-primary nav-cta" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-<figure class="figure">
-    <img src="imgs/fig1.jpeg" class="figure-img img-fluid rounded" >
-    <figcaption class="figure-caption">Fig.1 The framework of the level-based game.</figcaption>
-</figure>
+    <section id="top" class="hero">
+        <video class="hero-video"
+               autoplay
+               muted
+               loop
+               playsinline
+               preload="metadata"
+               poster="imgs/placeholder.png"
+               aria-label="Background gameplay footage">
+            <source src="media/back_video.mp4" type="video/mp4" />
+        </video>
 
+        <div class="hero-overlay"></div>
 
+        <div class="container hero-content">
+            <div class="row align-items-end">
+                <div class="col-12 col-lg-8">
+                    <div class="mb-3">
+                        <p class="hero-kicker mb-1">Educational VR Game</p>
+                        <h1 class="display-4 fw-semibold mb-0">Explore Marine Ecosystems In Extended Reality</h1>
+                    </div>
 
-<p style="text-align: justify;" class="">In the game, 3D models of marine organisms inhabiting different marine habitats are developed, as well as the game scene of their living habitats. To prepare for the real scene, we will do the data capture of intertidal habitats using air-drone to capture video of overall topography and surface, while the data capture of subtidal habitats using underwater drone with multiple cameras for wide-angle video capture. After that, we can use the 3D </span><span class="text-T2">reconstruction system to get the 3D models. However, the deep sea scene and 3D models are mostly referred from the reference videos provided by the team members.</p>
+                    <p class="lead hero-lead">
+                        A level-based VR learning adventure across intertidal shores, coral reefs, and the deep sea—powered by an
+                        AI learning companion we call <span class="text-emphasis">Marine GPT</span>.
+                    </p>
 
+                    <div class="d-flex flex-wrap gap-2 mt-4">
+                        <a class="btn btn-primary btn-lg" href="#trailer">Watch trailer</a>
+                        <a class="btn btn-outline-light btn-lg" href="#objectives">See objectives</a>
+                    </div>
 
+                    <div class="hero-badges mt-4">
+                        <span class="badge rounded-pill text-bg-dark">VR eLearning</span>
+                        <span class="badge rounded-pill text-bg-dark">Marine biodiversity</span>
+                        <span class="badge rounded-pill text-bg-dark">3D reconstruction</span>
+                        <span class="badge rounded-pill text-bg-dark">AI study prep</span>
+                    </div>
+                </div>
 
-<figure class="figure">
-    <img src="imgs/fig2.jpeg" class="figure-img img-fluid rounded" >
-    <figcaption class="figure-caption">Fig.2 Examples of 3D models proposed to build in the game.</figcaption>
-</figure>
+                <div class="col-lg-4 d-none d-lg-block">
+                    <div class="hero-card">
+                        <p class="text-uppercase small mb-2 text-muted">Quick snapshot</p>
+                        <ul class="list-unstyled mb-0">
+                            <li class="d-flex justify-content-between gap-3"><span>Levels</span><span class="text-emphasis">4</span></li>
+                            <li class="d-flex justify-content-between gap-3"><span>Biomes</span><span class="text-emphasis">Tropical + Subtropical</span></li>
+                            <li class="d-flex justify-content-between gap-3"><span>Learning mode</span><span class="text-emphasis">In-game + pre-game</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="hero-fade"></div>
+    </section>
 
+    <main id="main">
+        <section id="team" class="section-pad">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="h1 mb-2">Leads & Collaborators</h2>
+                </div>
 
-<figure class="figure text-center">
-    <img src="imgs/fig3.jpeg" class="figure-img img-fluid rounded" >
-    <figcaption class="figure-caption">Fig. 3. The underwater drone equipped with multiple cameras for wide-angle video capture will be deployed at designated locations. The drones will be remotely controlled to move along a transect a fixed distance and capture video at coastal and subtidal marine habitats.</figcaption>
-</figure>
+                <div class="row g-3 g-lg-4 mt-1">
+                    <div class="col-12 col-lg-4">
+                        <div class="card glass-card h-100">
+                            <div class="card-body">
+                                <p class="card-eyebrow">Project Leads</p>
+                                <h3 class="h5 mb-2">Prof. Sai-Kit Yeung</h3>
+                                <p class="text-secondary mb-3">Integrative Systems & Design, HKUST</p>
+                                <h3 class="h5 mb-2">Prof. Cindy Lam</h3>
+                                <p class="text-secondary mb-0">Department of Ocean Science, HKUST</p>
+                            </div>
 
-<p style="text-align: justify;" class="">We hope our Extended Reality eLearning platform can inspire marine research community to further explore and increase awareness of the general public on marine biodiversity and conservation.</p>
+                            <div class="avatar-group mt-3">
+                                <!--<a href="" target="_blank" class="avatar" title="Prof. Sai-Kit Yeung">-->
+                                <a class="avatar" title="Prof. Sai-Kit Yeung">
+                                    <img src="imgs/Avatars/avatar_placeholder.png" alt="Prof. Sai-Kit Yeung" />
+                                </a>
 
-<p style="text-align: justify;" class=""><span class="text-T2">We are hiring! If you are an ocean lover and want to develop new technology to solve different marine related problems, please email </span><a href="mailto:saikit@ust.hk" class="text-Internet_20_link"><span class="text-Internet_20_link"><span class="text-T2">saikit@ust.hk</span></span></a><span class="text-T2"> and </span><a href="mailto:envscindy@ust.hk" class="text-Internet_20_link"><span class="text-Internet_20_link"><span class="text-T2">envscindy@ust.hk</span></span></a><span class="text-T2"> to join our program. </span></p>
+                                <!--<a href="" target="_blank" class="avatar" title="Prof. Cindy Lam">-->
+                                <a class="avatar" title="Prof. Cindy Lam">
+                                    <img src="imgs/Avatars/avatar_placeholder.png" alt="Prof. Cindy Lam" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
-</div>
+                    <div class="col-12 col-lg-4">
+                        <div class="card glass-card h-100">
+                            <div class="card-body">
+                                <p class="card-eyebrow">Collaborators</p>
+                                <ul class="list-unstyled mb-0 text-secondary">
+                                    <li><span class="text-body">Prof. Apple Chui</span> — School of Life Sciences, CUHK</li>
+                                    <li><span class="text-body">Prof. Jianwen Qiu</span> — Department of Biology, HKBU</li>
+                                    <li><span class="text-body">Dr. Veronica Chan</span> — Department of Biology, HKBU</li>
+                                    <li><span class="text-body">Prof. Cedric Tan</span> — University of Nottingham Malaysia</li>
+                                </ul>
+                            </div>
 
+                            <div class="avatar-group mt-3">
+                                <!--<a href="" target="_blank" class="avatar" title="Prof. Sai-Kit Yeung">-->
+                                <a class="avatar" title="Prof. Apple Chui">
+                                    <img src="imgs/Avatars/avatar_placeholder.png" alt="Prof. Apple Chui" />
+                                </a>
 
+                                <!--<a href="" target="_blank" class="avatar" title="Prof. Cindy Lam">-->
+                                <a class="avatar" title="Prof. Jianwen Qiu">
+                                    <img src="imgs/Avatars/avatar_placeholder.png" alt="Prof. Jianwen Qiu" />
+                                </a>
+
+                                <!--<a href="" target="_blank" class="avatar" title="Prof. Sai-Kit Yeung">-->
+                                <a class="avatar" title="Dr. Veronica Chan">
+                                    <img src="imgs/Avatars/avatar_placeholder.png" alt="Dr. Veronica Chan" />
+                                </a>
+
+                                <!--<a href="" target="_blank" class="avatar" title="Prof. Cindy Lam">-->
+                                <a class="avatar" title="Prof. Cedric Tan">
+                                    <img src="imgs/Avatars/avatar_placeholder.png" alt="Prof. Cedric Tan" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4">
+                        <div class="card glass-card h-100">
+                            <div class="card-body">
+                                <p class="card-eyebrow">What We’re Building</p>
+                                <p class="text-secondary mb-0">
+                                    A game-first curriculum: players learn key marine concepts right before missions begin, then apply
+                                    them inside immersive scenarios.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="trailer" class="section-pad section-dark">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="h1 mb-2">Trailer</h2>
+                </div>
+
+                <div class="row g-4 align-items-center mt-1">
+                    <div class="col-12 col-lg-8">
+                        <div class="ratio ratio-16x9 video-frame">
+                            <video controls 
+                                   preload="metadata"
+                                   poster="imgs/MarineXR_Trailer_Poster.png">
+                                <source src="media/trailer.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="card glass-card">
+                            <div class="card-body">
+                                <p class="card-eyebrow">In 60 Seconds</p>
+                                <ul class="list-unstyled mb-0 text-secondary">
+                                    <li class="mb-2"><span class="text-body">Learn</span>: bite-sized concepts before each mission</li>
+                                    <li class="mb-2"><span class="text-body">Play</span>: scenario challenges across 4 habitats</li>
+                                    <li class="mb-0"><span class="text-body">Reflect</span>: recap + quiz prompts with Marine GPT</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="objectives" class="section-pad">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="h1 mb-2">Objectives</h2>
+                </div>
+
+                <div class="row g-3 g-lg-4 mt-1">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card glass-card h-100">
+                            <div class="card-body">
+                                <h3 class="h5">Increase Marine Literacy</h3>
+                                <p class="text-secondary">
+                                    Help learners recognize biodiversity and ecosystem dynamics across subtropical and tropical biomes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card glass-card h-100">
+                            <div class="card-body">
+                                <h3 class="h5">Motivate Through Play</h3>
+                                <p class="text-secondary">
+                                    A level-based loop: prepare → explore → solve challenges → advance to deeper habitats.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card glass-card h-100">
+                            <div class="card-body">
+                                <h3 class="h5">Bridge Data To Experience</h3>
+                                <p class="text-secondary">
+                                    Turn field capture (drone and underwater imagery) into 3D environments learners can inhabit.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="section-pad section-dark">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="h1 mb-2">Core Features</h2>
+                </div>
+
+                <div class="row g-4 align-items-stretch mt-1">
+                    <div class="col-12 col-lg-7">
+                        <div class="card glass-card h-100">
+                            <div class="card-body">
+                                <h3 class="h4 mb-3">Level-Based Marine Expedition</h3>
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-dot"></div>
+                                        <div>
+                                            <p class="mb-1"><span class="text-emphasis">Level 1</span> — Intertidal habitats</p>
+                                            <p class="text-secondary mb-0">Mangroves and mudflats 🦀</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-dot"></div>
+                                        <div>
+                                            <p class="mb-1"><span class="text-emphasis">Level 2</span> — Intertidal habitats</p>
+                                            <p class="text-secondary mb-0">Boulder shore 🦐</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-dot"></div>
+                                        <div>
+                                            <p class="mb-1"><span class="text-emphasis">Level 3</span> — Subtidal coral reefs</p>
+                                            <p class="text-secondary mb-0">Reef structure, symbiosis, community interactions 🐠</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-dot"></div>
+                                        <div>
+                                            <p class="mb-1"><span class="text-emphasis">Level 4</span> — Deep sea</p>
+                                            <p class="text-secondary mb-0">Low-light adaptations, extreme environments 🦑</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-5">
+                        <div class="card glass-card h-100">
+                            <div class="card-body">
+                                <h3 class="h4 mb-3">Marine GPT Learning Companion</h3>
+                                <p class="text-secondary">
+                                    A marine-specific AI assistant that helps learners review key concepts right before missions begin,
+                                    then supports recall with quick prompts and reflection.
+                                </p>
+                                <div class="callout">
+                                    <p class="mb-1 fw-semibold">Example Prompt</p>
+                                    <p class="mb-0 text-secondary">
+                                        “Before entering the reef: what are 3 indicators of reef health, and how might they change after a
+                                        bleaching event?”
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="assets" class="section-pad">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="h1 mb-2">Visuals & Assets</h2>
+                </div>
+
+                <div class="row g-3 g-lg-4 mt-1">
+                    <div class="col-12 col-lg-6">
+                        <div class="asset-card gallery" data-gallery="scenes">
+                            <div class="w-100 carousel-container">
+                                <div class="carousel-track"></div>
+                                <div class="asset-caption d-flex justify-content-between align-items-center">
+                                    <span class="text-emphasis">Scene Screenshots</span>
+                                    <div class="gallery-controls">
+                                        <button class="btn btn-outline-light btn-sm gallery-prev" type="button" aria-label="Previous scene">‹</button>
+                                        <button class="btn btn-outline-light btn-sm gallery-next" type="button" aria-label="Next scene">›</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <div class="asset-card gallery" data-gallery="models">
+                            <div class="w-100 carousel-container">
+                                <div class="carousel-track"></div>
+                                <div class="asset-caption d-flex justify-content-between align-items-center">
+                                    <span class="text-emphasis">3D Models</span>
+                                    <div class="gallery-controls">
+                                        <button class="btn btn-outline-light btn-sm gallery-prev" type="button" aria-label="Previous model">‹</button>
+                                        <button class="btn btn-outline-light btn-sm gallery-next" type="button" aria-label="Next model">›</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="bts" class="section-pad section-dark">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="h1 mb-2">Behind The Scene</h2>
+                </div>
+
+                <div class="row g-3 g-lg-4 mt-1">
+                    <div class="col-12 col-lg-6">
+                        <div class="asset-card gallery" data-gallery="bts">
+                            <div class="w-100 carousel-container">
+                                <div class="carousel-track"></div>
+                                <div class="asset-caption d-flex justify-content-between align-items-center">
+                                    <span class="text-emphasis">Photos</span>
+                                    <div class="gallery-controls">
+                                        <button class="btn btn-outline-light btn-sm gallery-prev" type="button" aria-label="Previous bts">‹</button>
+                                        <button class="btn btn-outline-light btn-sm gallery-next" type="button" aria-label="Next bts">›</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-pad section-dark">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-12 col-lg-7">
+                        <h2 class="h1 mb-2">Follow Us / Contact</h2>
+                    </div>
+                    <div class="col-12 col-lg-5">
+                        <div class="card glass-card">
+                            <div class="card-body">
+                                <p class="mb-2"><span class="text-emphasis">Email</span></p>
+                                <a class="h5" href="mailto:saikit@ust.hk">Prof. Sai-Kit Yeung</a>
+                                <p class="text-secondary mb-3">Integrative Systems & Design, HKUST</p>
+                                <a class="h5" href="mailto:envscindy@ust.hk">Prof. Cindy Lam</a>
+                                <p class="text-secondary mb-3">Department of Ocean Science, HKUST</p>
+                                <p class="mb-3"></p>
+
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a class="btn btn-primary" href="mailto:saikit@ust.hk?subject=MarineXR%20Inquiry">Send inquiry</a>
+                                    <a class="btn btn-outline-light" href="#top">Back to top</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="footer-rule my-5" />
+                <div class="d-flex flex-column flex-md-row justify-content-between gap-2 small text-secondary">
+                    <span>© <span id="year"></span> MarineXR</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Tiny enhancement: keep footer year current (works even with JS disabled; just cosmetic).
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        // Simple galleries for scenes and models
+        const galleries = {
+            scenes: [
+                "imgs/SceneScreenshot/ScreenCap_1_Mudflat.png",
+                "imgs/SceneScreenshot/ScreenCap_2_BlouderShore.png",
+                "imgs/SceneScreenshot/ScreenCap_3_Coral.png",
+                "imgs/SceneScreenshot/ScreenCap_4_Deepsea.png",
+            ],
+            models: [
+                "imgs/Models/Clownfish_gif.gif",
+                "imgs/Models/fiddlercrab_gif.gif",
+                "imgs/Models/SoldierCrab.png"
+            ],
+            bts: [
+                "imgs/Bts/1.png",
+                "imgs/Bts/2.png",
+                "imgs/Bts/3.png"
+            ]
+        };
+
+        // --- Auto-roll for galleries when visible ---
+        const AUTO_ROLL_INTERVAL = 5000; // ms
+
+        document.querySelectorAll(".gallery").forEach((galleryEl) => {
+            const key = galleryEl.dataset.gallery;
+            const imgs = galleries[key] || [];
+            const track = galleryEl.querySelector(".carousel-track");
+            if (!imgs.length || !track) return;
+
+            let idx = 0;
+            let autoRollTimer = null;
+
+            // 1. Create the card elements dynamically
+            imgs.forEach((src, i) => {
+                const card = document.createElement("div");
+                card.classList.add("carousel-card");
+                const placeholder = "imgs/placeholder.png";
+                card.innerHTML = `<img src="${src}" alt="${key} ${i + 1}" onerror="this.onerror=null;this.src='${placeholder}';">`;
+                track.appendChild(card);
+            });
+
+            const cards = track.querySelectorAll(".carousel-card");
+
+            // 2. The function that handles the "Card Mode" CSS classes
+            const updateCards = () => {
+                stopAutoRoll();
+                startAutoRoll(key === "bts" ? 2 : 1);
+                cards.forEach((card, i) => {
+                    card.classList.remove("active", "prev", "next", "hidden");
+
+                    if (key === "models") {
+                        const img = card.querySelector("img");
+                        if (img) {
+                            const isGif = imgs[i].toLowerCase().endsWith('.gif');
+                            if (isGif) {
+                                img.src = imgs[i];
+                            }
+                        }
+                    }
+
+                    // Remove any previous click handlers to avoid stacking
+                    card.onclick = null;
+
+                    if (i === idx) {
+                        card.classList.add("active");
+                    } else if (i === (idx + 1) % imgs.length) {
+                        card.classList.add("next");
+                        card.onclick = () => {
+                            idx = (idx + 1) % imgs.length;
+                            updateCards();
+                        };
+                    } else if (i === (idx - 1 + imgs.length) % imgs.length) {
+                        card.classList.add("prev");
+                        card.onclick = () => {
+                            idx = (idx - 1 + imgs.length) % imgs.length;
+                            updateCards();
+                        };
+                    } else {
+                        card.classList.add("hidden");
+                    }
+                });
+            };
+
+            // 3. Reuse your existing button logic
+            galleryEl.querySelectorAll(".gallery-next").forEach((btn) =>
+                btn.addEventListener("click", () => {
+                    idx = (idx + 1) % imgs.length;
+                    updateCards();
+                })
+            );
+
+            galleryEl.querySelectorAll(".gallery-prev").forEach((btn) =>
+                btn.addEventListener("click", () => {
+                    idx = (idx - 1 + imgs.length) % imgs.length;
+                    updateCards();
+                })
+            );
+
+            updateCards(); // Initialize the first view
+
+            // --- Auto-roll logic ---
+            function startAutoRoll(multiplier) {
+                if (autoRollTimer) return;
+                let interval = AUTO_ROLL_INTERVAL * multiplier;
+
+                autoRollTimer = setInterval(() => {
+                    idx = (idx + 1) % imgs.length;
+                    updateCards();
+                }, interval);
+            }
+            function stopAutoRoll() {
+                if (autoRollTimer) {
+                    clearInterval(autoRollTimer);
+                    autoRollTimer = null;
+                }
+            }
+
+            // Intersection Observer to detect visibility
+            const observer = new window.IntersectionObserver(
+                (entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            startAutoRoll();
+                        } else {
+                            stopAutoRoll();
+                        }
+                    });
+                },
+                { threshold: 0.5 }
+            );
+            observer.observe(galleryEl);
+        });
+
+        window.addEventListener('scroll', () => {
+            // Calculate how far the user has scrolled as a percentage
+            const scrollPercent = window.scrollY / (document.body.offsetHeight - window.innerHeight);
+
+            // Start at Lightness 80% (Light Blue) and go down to 20% (Dark Blue)
+            const lightness = 70 - (scrollPercent * 50);
+
+            document.body.style.backgroundColor = `hsl(215, 70%, ${lightness}%)`;
+        });
+    </script>
 </body>
-
 </html>
