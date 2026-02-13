@@ -1,3 +1,5 @@
+URL: https://marinexr.hkustvgd.com/
+
 Notes
 - The site includes poster fallback images in imgs/ so it still looks good even if these files are missing.
 - Keep filenames the same or update the <source> tags in index.html.
